@@ -25,3 +25,9 @@ tyle = User.create(
   password: 'password',
   password_confirmation: 'password'
 )
+
+vision = Vision.create(
+  user_id: austin.id,
+  statement: 'I am 36 years old, living in Seattle, Washington with my husband and our dog(s), and working as a software developer for a creative company that inspires me each and every day.',
+  timeframe: 10
+)
