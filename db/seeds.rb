@@ -81,3 +81,8 @@ tagging_tyle = Tagging.create(
   goal_id: goal_tyle.id,
   tag_id: tag_tyle.id
 )
+
+cheer = Cheer.create(
+  user_id: austin.id,
+  goal_id: goal_tyle.id
+)
