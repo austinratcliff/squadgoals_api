@@ -105,3 +105,12 @@ squad_member = SquadMember.create(
   squad_id: squad.id,
   member_id: tyle.id
 )
+
+collaboration = Collaboration.create(
+  message: "Let's brainstorm!",
+  requester_id: austin.id,
+  requestee_id: tyle.id,
+  requester_goal_id: goal_austin.id,
+  requestee_goal_id: goal_tyle.id,
+  request_status_id: request_status.id
+)
