@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :goals
   resources :sub_goals
   resources :categories
+  resources :tags
 end
