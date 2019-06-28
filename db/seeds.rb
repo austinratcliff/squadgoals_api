@@ -31,3 +31,19 @@ vision = Vision.create(
   statement: 'I am 36 years old, living in Seattle, Washington with my husband and our dog(s), and working as a software developer for a creative company that inspires me each and every day.',
   timeframe: 10
 )
+
+goal_austin = Goal.create(
+  user_id: austin.id,
+  category_id: 0,
+  content: 'Code something.',
+  by_when: DateTime.now,
+  is_private: false
+)
+
+goal_tyle = Goal.create(
+  user_id: tyle.id,
+  category_id: 0,
+  content: 'Film something.',
+  by_when: DateTime.now,
+  is_private: false
+)
