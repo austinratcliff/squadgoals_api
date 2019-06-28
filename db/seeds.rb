@@ -121,3 +121,10 @@ project = Project.create(
   description: 'A space brainstorm apps, films, and other creative things.',
   is_private: true
 )
+
+project_goal = ProjectGoal.create(
+  project_id: project.id,
+  content: 'Create a list of ideas to do as a creative backlog.',
+  by_when: DateTime.now,
+  is_private: true
+)
