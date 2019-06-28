@@ -47,3 +47,15 @@ goal_tyle = Goal.create(
   by_when: DateTime.now,
   is_private: false
 )
+
+sub_goal_austin = SubGoal.create(
+  goal_id: goal_austin.id,
+  content: 'Brainstorm with Tyle.',
+  is_complete: false
+)
+
+sub_goal_tyle = SubGoal.create(
+  goal_id: goal_tyle.id,
+  content: 'Brainstorm with Austin.',
+  is_complete: false
+)
