@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   resources :squads
   resources :squad_members
   resources :collaborations
+  resources :projects
 end
