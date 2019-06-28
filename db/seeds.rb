@@ -134,3 +134,13 @@ project_sub_goal = ProjectSubGoal.create(
   content: 'Schedule the first brainstorming session.',
   is_complete: false
 )
+
+project_member_austin = ProjectMember.create(
+  project_id: project.id,
+  member_id: austin.id
+)
+
+project_member_tyle = ProjectMember.create(
+  project_id: project.id,
+  member_id: tyle.id
+)
