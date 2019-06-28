@@ -86,3 +86,7 @@ cheer = Cheer.create(
   user_id: austin.id,
   goal_id: goal_tyle.id
 )
+
+request_status = RequestStatus.create(
+  name: 'Yes'
+)
