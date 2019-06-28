@@ -144,3 +144,9 @@ project_member_tyle = ProjectMember.create(
   project_id: project.id,
   member_id: tyle.id
 )
+
+collaboration_goal = CollaborationGoal.create(
+  project_id: project.id,
+  requester_goal_id: goal_austin.id,
+  requestee_goal_id: goal_tyle.id
+)
