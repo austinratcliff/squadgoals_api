@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :cheers
   resources :request_statuses
   resources :connections
+  resources :squads
 end
