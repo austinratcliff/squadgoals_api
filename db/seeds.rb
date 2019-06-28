@@ -100,3 +100,8 @@ connection = Connection.create(
 squad = Squad.create(
   user_id: austin.id
 )
+
+squad_member = SquadMember.create(
+  squad_id: squad.id,
+  member_id: tyle.id
+)
