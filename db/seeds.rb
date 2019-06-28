@@ -32,9 +32,13 @@ vision = Vision.create(
   timeframe: 10
 )
 
+category = Category.create(
+  name: 'Career'
+)
+
 goal_austin = Goal.create(
   user_id: austin.id,
-  category_id: 0,
+  category_id: category.id,
   content: 'Code something.',
   by_when: DateTime.now,
   is_private: false
@@ -42,7 +46,7 @@ goal_austin = Goal.create(
 
 goal_tyle = Goal.create(
   user_id: tyle.id,
-  category_id: 0,
+  category_id: category.id,
   content: 'Film something.',
   by_when: DateTime.now,
   is_private: false
