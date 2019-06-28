@@ -128,3 +128,9 @@ project_goal = ProjectGoal.create(
   by_when: DateTime.now,
   is_private: true
 )
+
+project_sub_goal = ProjectSubGoal.create(
+  project_goal_id: project_goal.id,
+  content: 'Schedule the first brainstorming session.',
+  is_complete: false
+)
