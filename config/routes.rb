@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :request_statuses
   resources :connections
   resources :squads
+  resources :squad_members
 end
