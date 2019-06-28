@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :visions
   resources :goals
   resources :sub_goals
+  resources :categories
 end
