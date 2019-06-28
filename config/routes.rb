@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   resources :project_goals
   resources :project_sub_goals
   resources :project_members
+  resources :collaboration_goals
 end
