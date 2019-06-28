@@ -90,3 +90,9 @@ cheer = Cheer.create(
 request_status = RequestStatus.create(
   name: 'Yes'
 )
+
+connection = Connection.create(
+  requester_id: austin.id,
+  requestee_id: tyle.id,
+  request_status_id: request_status.id
+)
