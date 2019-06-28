@@ -96,3 +96,7 @@ connection = Connection.create(
   requestee_id: tyle.id,
   request_status_id: request_status.id
 )
+
+squad = Squad.create(
+  user_id: austin.id
+)
