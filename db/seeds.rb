@@ -63,3 +63,11 @@ sub_goal_tyle = SubGoal.create(
   content: 'Brainstorm with Austin.',
   is_complete: false
 )
+
+tag_austin = Tag.create(
+  name: 'Software'
+)
+
+tag_tyle = Tag.create(
+  name: 'Film'
+)
