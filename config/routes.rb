@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :taggings
   resources :cheers
   resources :request_statuses
+  resources :connections
 end
