@@ -1,0 +1,2 @@
+class SubGoal < ApplicationRecord
+end
