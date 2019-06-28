@@ -114,3 +114,10 @@ collaboration = Collaboration.create(
   requestee_goal_id: goal_tyle.id,
   request_status_id: request_status.id
 )
+
+project = Project.create(
+  user_id: austin.id,
+  name: 'Brainstorm',
+  description: 'A space brainstorm apps, films, and other creative things.',
+  is_private: true
+)
