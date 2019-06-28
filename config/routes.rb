@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :users
   resources :visions
   resources :goals
+  resources :sub_goals
 end
