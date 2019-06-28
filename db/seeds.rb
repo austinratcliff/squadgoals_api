@@ -71,3 +71,13 @@ tag_austin = Tag.create(
 tag_tyle = Tag.create(
   name: 'Film'
 )
+
+tagging_austin = Tagging.create(
+  goal_id: goal_austin.id,
+  tag_id: tag_austin.id
+)
+
+tagging_tyle = Tagging.create(
+  goal_id: goal_tyle.id,
+  tag_id: tag_tyle.id
+)
