@@ -1,10 +1,36 @@
 require 'rails_helper'
 
 describe TaggingsController do
+  austin = User.create(
+    first_name: 'Austin',
+    last_name: 'Ratcliff',
+    name: 'Austin Ratcliff',
+    email: 'austin@example.com',
+    phone: '1234567890',
+    password: 'password',
+    password_confirmation: 'password'
+  )
+
+  category = Category.create(
+    name: 'Career'
+  )
+
+  goal_austin = Goal.create(
+    user_id: austin.id,
+    category_id: category.id,
+    content: 'Code something.',
+    by_when: DateTime.now,
+    is_private: false
+  )
+
+  tag_austin = Tag.create(
+    name: 'Software'
+  )
+
   let(:valid_attributes) {
     {
-      goal_id: 0,
-      tag_id: 0
+      goal_id: goal_austin.id,
+      tag_id: tag_austin.id
     }
   }
 
@@ -58,10 +84,7 @@ describe TaggingsController do
   describe 'PUT #update' do
     context 'with valid params' do
       let(:new_attributes) {
-        {
-          goal_id: 1,
-          tag_id: 1
-        }
+        skip('Taggings cannot get updated')
       }
 
       it 'updates the requested tagging' do

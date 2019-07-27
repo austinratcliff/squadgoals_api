@@ -1,10 +1,14 @@
 require 'rails_helper'
 
 describe GoalsController do
+  category = Category.create(
+    name: 'Career'
+  )
+
   let(:valid_attributes) {
     {
       user_id: 0,
-      category_id: 0,
+      category_id: category.id,
       content: 'Test content',
       by_when: DateTime.now,
       is_private: false
@@ -63,7 +67,7 @@ describe GoalsController do
       let(:new_attributes) {
         {
           user_id: 0,
-          category_id: 0,
+          category_id: category.id,
           content: 'New content',
           by_when: DateTime.now,
           is_private: false
