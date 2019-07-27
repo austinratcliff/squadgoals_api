@@ -1,10 +1,34 @@
 require 'rails_helper'
 
 describe SquadMembersController do
+  austin = User.create(
+    first_name: 'Austin',
+    last_name: 'Ratcliff',
+    name: 'Austin Ratcliff',
+    email: 'austin@example.com',
+    phone: '1234567890',
+    password: 'password',
+    password_confirmation: 'password'
+  )
+
+  tyle = User.create(
+    first_name: 'Tyle',
+    last_name: 'Bivens',
+    name: 'Tyle Bivens',
+    email: 'tyle@example.com',
+    phone: '1234567890',
+    password: 'password',
+    password_confirmation: 'password'
+  )
+
+  squad = Squad.create(
+    user_id: austin.id
+  )
+
   let(:valid_attributes) {
     {
-      squad_id: 0,
-      member_id: 0
+      squad_id: squad.id,
+      member_id: tyle.id
     }
   }
 
@@ -58,10 +82,7 @@ describe SquadMembersController do
   describe 'PUT #update' do
     context 'with valid params' do
       let(:new_attributes) {
-        {
-          squad_id: 1,
-          member_id: 1
-        }
+        skip('Squad members cannot get updated')
       }
 
       it 'updates the requested squad_member' do
