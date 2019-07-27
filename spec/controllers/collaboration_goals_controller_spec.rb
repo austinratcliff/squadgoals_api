@@ -1,11 +1,58 @@
 require 'rails_helper'
 
 describe CollaborationGoalsController do
+  austin = User.create(
+    first_name: 'Austin',
+    last_name: 'Ratcliff',
+    name: 'Austin Ratcliff',
+    email: 'austin@example.com',
+    phone: '1234567890',
+    password: 'password',
+    password_confirmation: 'password'
+  )
+
+  tyle = User.create(
+    first_name: 'Tyle',
+    last_name: 'Bivens',
+    name: 'Tyle Bivens',
+    email: 'tyle@example.com',
+    phone: '1234567890',
+    password: 'password',
+    password_confirmation: 'password'
+  )
+
+  category = Category.create(
+    name: 'Career'
+  )
+
+  goal_austin = Goal.create(
+    user_id: austin.id,
+    category_id: category.id,
+    content: 'Code something.',
+    by_when: DateTime.now,
+    is_private: false
+  )
+
+  goal_tyle = Goal.create(
+    user_id: tyle.id,
+    category_id: category.id,
+    content: 'Film something.',
+    by_when: DateTime.now,
+    is_private: false
+  )
+
+  project = Project.create(
+    user_id: austin.id,
+    name: 'Brainstorm',
+    description: 'A space brainstorm apps, films, and other creative things.',
+    is_private: true
+  )
+
   let(:valid_attributes) {
     {
-      project_id: 0,
-      requester_goal_id: 0,
-      requestee_goal_id: 0,
+      project_id: project.id,
+      requester_goal_id: goal_austin.id,
+      requestee_goal_id: goal_tyle.id,
     }
   }
 
@@ -59,11 +106,7 @@ describe CollaborationGoalsController do
   describe 'PUT #update' do
     context 'with valid params' do
       let(:new_attributes) {
-        {
-          project_id: 1,
-          requester_goal_id: 1,
-          requestee_goal_id: 1,
-        }
+        skip('Collaboration goals cannot get updated')
       }
 
       it 'updates the requested collaboration_goal' do

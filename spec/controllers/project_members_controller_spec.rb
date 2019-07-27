@@ -1,10 +1,27 @@
 require 'rails_helper'
 
 describe ProjectMembersController do
+  austin = User.create(
+    first_name: 'Austin',
+    last_name: 'Ratcliff',
+    name: 'Austin Ratcliff',
+    email: 'austin@example.com',
+    phone: '1234567890',
+    password: 'password',
+    password_confirmation: 'password'
+  )
+
+  project = Project.create(
+    user_id: austin.id,
+    name: 'Brainstorm',
+    description: 'A space brainstorm apps, films, and other creative things.',
+    is_private: true
+  )
+
   let(:valid_attributes) {
     {
-      project_id: 0,
-      member_id: 0
+      project_id: project.id,
+      member_id: austin.id
     }
   }
 
@@ -58,10 +75,7 @@ describe ProjectMembersController do
   describe 'PUT #update' do
     context 'with valid params' do
       let(:new_attributes) {
-        {
-          project_id: 1,
-          member_id: 1
-        }
+        skip('Project members cannot get updated')
       }
 
       it 'updates the requested project_member' do
